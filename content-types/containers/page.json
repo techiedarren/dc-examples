@@ -1,0 +1,48 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/page.json",
+
+  "title": "Page",
+  "description": "Page acts as a container for other content blocks",
+
+  "allOf":[
+    {
+      "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+
+  "type":"object",
+  "properties":{
+
+    "contentSlots": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+          {
+            "properties": {
+              "contentType": {
+                "title": "",
+                "enum": [
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/image-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/video-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/text-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/hero-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/split-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/container/carousel.json",
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/container/grid.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "maxItems": 15,
+      "title": "Page Content",
+      "description": "add any content block into the page content"
+    }
+
+  },
+
+  "propertyOrder": ["contentSlots"]
+}
