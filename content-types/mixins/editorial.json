@@ -1,0 +1,68 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/mixins/editorial.json",
+
+  "title": "Editorial",
+  "description": "editorial text for use in an overlay or small panel",
+
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Editorial Title",
+      "description": "optional header text to display above the editorial text",
+      "format": "text"
+    },
+
+    "text": {
+      "type": "string",
+      "title": "Editorial Text",
+      "description": "editorial copy to display as a layer over the background image, or in an adjacent block",
+      "format": "text"
+    },
+
+    "callToAction": { "$ref": "call-to-action.json#" },
+
+    "useParentAsCtaHotspot": {
+      "type": "boolean",
+      "title": "Parent Container is Call To Action Hotspot",
+      "description": "when true, the full area of the parent block will be clickable"
+    },
+
+    "overlayAlignment": {
+      "type": "string",
+      "enum": [
+        "Top Left",
+        "Top Right",
+        "Bottom Left",
+        "Bottom Right",
+        "Center"
+      ],
+      "title": "Overlay Alignment",
+      "description": "Hints to the UI where the overlay alignment would be best for the underlying media"
+    },
+
+    "overlayTheme": {
+      "type": "string",
+      "enum": [
+        "None",
+        "Darken",
+        "Lighten"
+      ],
+      "title": "Overlay Theme",
+      "description": "choose a theme for the editorial text (default is 'None')"
+    },
+
+    "alignCopyText": {
+      "type": "string",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ],
+      "title": "Align Copy Text",
+      "description": "choose editorial text alignment (default is 'center')"
+    }
+  },
+  "propertyOrder": ["title", "text", "callToAction", "useParentAsCtaHotspot", "overlayAlignment", "overlayTheme", "alignCopyText"]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/mixins/call-to-action.json",
+
+  "title": "Call to Action",
+  "description":"",
+
+  "type": "object",
+  "properties": {
+    "text": {
+      "type": "string",
+      "maxLength": 155,
+      "title": "Action Text",
+      "format": "text"
+    },
+    "url": {
+      "type": "string",
+      "title": "Action Url",
+      "description": "an absolute or relative url to link to from the call to action",
+      "format": "uri"
+    }
+  },
+  "propertyOrder": ["text", "url"]
+}
