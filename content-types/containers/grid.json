@@ -1,0 +1,68 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/grid.json",
+
+  "title": "Grid",
+  "description": "A grid panel that acts as a container for basic content blocks",
+
+  "allOf":[
+    {
+      "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+
+  "type":"object",
+  "properties":{
+
+    "gridContent": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+          {
+            "properties": {
+              "contentType": {
+                "title": "",
+                "enum": [
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/image-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/video-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/text-block.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 100,
+      "title": "Grid Content",
+      "description": "add image blocks, video blocks or text blocks to display in a grid"
+    },
+
+    "itemColumnsMobile": {
+      "type": "integer",
+      "title": "Item Columns (Mobile)",
+      "description": "the number of columns each item should take on a XS device (eg. Mobile phone). Defaults to 12.",
+      "minimum": 1,
+      "maximum": 12
+    },
+    
+    "itemColumnsTablet": {
+      "type": "integer",
+      "title": "Item Columns (Tablet)",
+      "description": "the number of columns each item should take on a S device (eg. Tablet). Defaults to 4.",
+      "minimum": 1,
+      "maximum": 12
+    },
+
+    "itemColumnsDesktop": {
+      "type": "integer",
+      "title": "Item Columns (Desktop)",
+      "description": "the number of columns each item should take on a M device (eg. Desktop). Defaults to 3.",
+      "minimum": 1,
+      "maximum": 12
+    }
+  },
+
+  "propertyOrder": ["gridContent", "itemColumnsMobile", "itemColumnsTablet", "itemColumnsDesktop"]
+}
