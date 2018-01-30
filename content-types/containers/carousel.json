@@ -1,0 +1,46 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/carousel.json",
+
+  "title": "Carousel",
+  "description": "A carousel containing other content blocks",
+
+  "allOf":[
+    {
+      "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+
+  "type":"object",
+  "properties":{
+
+    "slides": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+          {
+            "properties": {
+              "contentType": {
+                "title": "",
+                "enum": [
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/image-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/video-block.json",
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/text-block.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 10,
+      "title": "Carousel Slides",
+      "description": ""
+    },
+
+    "aspectRatio": { "$ref": "../mixins/aspect-ratio.json#" }
+
+  },
+  "propertyOrder": ["slides", "aspectRatio"]
+}
