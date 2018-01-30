@@ -1,0 +1,34 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/text-block.json",
+
+  "title":"Text Block",
+  "description":"A page block element that displays paragraph text",
+  "allOf":[
+    {
+      "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+
+  "type":"object",
+  "properties":{
+    "editorialTitle":{
+      "type":"string",
+      "title":"Editorial Title",
+      "description":"optional header text to display above the editorial text",
+      "minLength":0,
+      "maxLength":100,
+      "format":"text"
+    },
+    "paragraphs":{
+      "type":"array",
+      "title":"Paragraphs",
+      "items":{
+        "type":"string",
+        "title":"Paragraph",
+        "format":"text"
+      }
+    }
+  },
+  "propertyOrder": ["editorialTitle", "paragraphs"]
+}
