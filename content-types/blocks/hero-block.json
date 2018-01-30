@@ -1,0 +1,38 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/hero-block.json",
+
+  "title": "Hero Panel",
+  "description": "A page hero panel that acts as a slot for other content blocks",
+
+  "allOf":[
+    {
+      "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+
+  "type":"object",
+  "properties":{
+
+    "panelContent": {
+      "title": "Panel Content",
+      "description": "select an image block to use as a hero panel",
+
+      "allOf": [
+        { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link" },
+        {
+          "properties": {
+            "contentType": {
+              "title": "",
+              "enum": [
+                "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/image-block.json"
+              ]
+            }
+          }
+        }
+      ]
+    }
+
+  },
+  "propertyOrder": ["panelContent"]
+}
