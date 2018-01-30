@@ -1,6 +1,6 @@
 {
   "$schema":"http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/text-block.json",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/text-block.json",
 
   "title":"Text Block",
   "description":"A page block element that displays paragraph text",

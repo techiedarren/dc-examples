@@ -1,0 +1,22 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/image-block.json",
+
+  "title":"Image Block",
+  "description":"A page block element that can display an image, a text overlay and a call to action",
+  "allOf":[
+    {
+      "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+
+  "type":"object",
+  "properties":{
+
+    "image": { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link" },
+
+    "aspectRatio": { "$ref": "../mixins/aspect-ratio.json#" }
+
+  },
+  "propertyOrder": ["image", "aspectRatio"]
+}

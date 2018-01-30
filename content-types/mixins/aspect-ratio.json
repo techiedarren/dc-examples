@@ -1,0 +1,22 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/mixins/aspect-ratio.json",
+
+  "title": "Aspect Ratio",
+  "description":"",
+
+  "type": "object",
+  "properties": {
+    "w": {
+      "type": "integer",
+      "title": "w",
+      "description": "the width component of an aspect ratio w:h"
+    },
+    "h": {
+      "type": "integer",
+      "title": "h",
+      "description": "the height component of an aspect ratio w:h"
+    }
+  },
+  "propertyOrder": ["w", "h"]
+}
