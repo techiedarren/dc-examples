@@ -1,0 +1,40 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/video-block.json",
+
+  "title": "Video Block",
+  "description": "A page block element that can display a video, editorial text and a call to action",
+
+  "allOf":[
+    {
+      "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+
+  "type":"object",
+  "properties":{
+
+    "video": { "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/video-link" },
+
+    "editorialTitle": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 100,
+      "title": "Editorial Title",
+      "description": "optional header text to display above the editorial text",
+      "format": "text"
+    },
+
+    "editorialText": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Editorial Text",
+      "format": "text"
+    },
+
+    "callToAction": { "$ref": "../mixins/call-to-action.json#" }
+
+  },
+  "propertyOrder": ["video", "editorialTitle", "editorialText", "callToAction"]
+}
