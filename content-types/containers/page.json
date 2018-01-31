@@ -29,8 +29,8 @@
                   "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/text-block.json",
                   "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/hero-block.json",
                   "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/split-block.json",
-                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/container/carousel.json",
-                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/container/grid.json"
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/carousel.json",
+                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/grid.json"
                 ]
               }
             }
