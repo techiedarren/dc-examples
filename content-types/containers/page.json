@@ -31,7 +31,7 @@
                   "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/split-block.json",
                   "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/carousel.json",
                   "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/grid.json",
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/res/simpleBanner/contentType/simple-banner.json"
+                  "http://dev-solutions.s3.amazonaws.com/DynamicContentTypes/res/simpleBanner/contentType/simple-banner.json"
                 ]
               }
             }
