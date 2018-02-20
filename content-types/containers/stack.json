@@ -1,9 +1,9 @@
 {
   "$schema":"http://json-schema.org/draft-04/schema#",
-  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/page.json",
+  "id":"https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/stack.json",
 
-  "title": "Page",
-  "description": "Page acts as a container for other content blocks",
+  "title": "Content Stack",
+  "description": "Stack acts as a container for other content blocks",
 
   "allOf":[
     {
@@ -14,7 +14,7 @@
   "type":"object",
   "properties":{
 
-    "contentSlots": {
+    "content": {
       "type": "array",
       "items": {
         "allOf": [
@@ -31,7 +31,6 @@
                   "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/blocks/split-block.json",
                   "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/carousel.json",
                   "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/grid.json",
-                  "https://raw.githubusercontent.com/techiedarren/dc-examples/master/content-types/containers/stack.json",
                   "http://dev-solutions.s3.amazonaws.com/DynamicContentTypes/res/simpleBanner/contentType/simple-banner.json"
                 ]
               }
@@ -40,11 +39,11 @@
         ]
       },
       "maxItems": 15,
-      "title": "Page Content",
-      "description": "add any content block into the page content"
+      "title": "Content",
+      "description": "add any content block into the content stack"
     }
 
   },
 
-  "propertyOrder": ["contentSlots"]
+  "propertyOrder": ["content"]
 }
