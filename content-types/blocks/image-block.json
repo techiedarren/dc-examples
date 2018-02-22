@@ -17,8 +17,17 @@
 
     "editorial": { "$ref": "../mixins/editorial.json#" },
 
-    "aspectRatio": { "$ref": "../mixins/aspect-ratio.json#" }
+    "aspectRatio": { "$ref": "../mixins/aspect-ratio.json#" },
+
+    "mobileAspectRatio": {
+      "allOf": [
+        { "$ref": "../mixins/aspect-ratio.json#" },
+        {
+          "title": "Mobile Aspect Ratio"
+        }
+      ]
+    }
 
   },
-  "propertyOrder": ["image", "aspectRatio"]
+  "propertyOrder": ["image", "aspectRatio", "mobileAspectRatio"]
 }
